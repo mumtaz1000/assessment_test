@@ -1,15 +1,15 @@
 import React, { useEffect, useState } from "react"
 
 const PersonDetail = (name) => {
-    const [reqName, setReqName] = useState("")
+const [reqName, setReqName] = useState(name)
 const [show, setShow] = useState(true)
 const handleChange =()=>{
     setShow(false);
-    setReqName("");
+   
 }
 useEffect(()=>{
-    setShow(true)
-    setReqName(name);
+setShow(true)
+setReqName(name)
 },[name])
 
     return (

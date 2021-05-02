@@ -18,12 +18,12 @@ const fetchData = async () =>{
 }
 
 function handleChange(){
-    setPageNo(pageNo+1)
+    setPageNo(prevCount => prevCount+1)
     fetchData()
 }
 
 function goBack(){
-    setPageNo(pageNo-1)
+    setPageNo(prevCount => prevCount-1)
     fetchData()
 }
 
