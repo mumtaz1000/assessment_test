@@ -12,6 +12,7 @@ const PaginationComponent = () => {
 const fetchData = async () =>{
     setLoading(true)
     const response = await axios.get(`https://swapi.dev/api/people/?page=${pageNo}`)
+    console.log(response.data.results)
     setData(response.data.results)
     setLoading(false)
     

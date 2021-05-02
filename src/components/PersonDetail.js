@@ -1,23 +1,29 @@
-import React, { useEffect, useState } from "react"
+import React, { useState } from "react"
 
 const PersonDetail = (name) => {
-const [reqName, setReqName] = useState(name)
-const [show, setShow] = useState(true)
-const handleChange =()=>{
-    setShow(false);
-   
+const [show, setShow] = useState(false)
+
+function open(){
+  setShow(!show)
 }
-useEffect(()=>{
-setShow(true)
-setReqName(name)
-},[name])
+
+function close(){
+  setShow(!show);
+}
+if(!show){
+  return <ul >
+          {Object.entries(name).map(([key, value]) => (
+            <li id="personName" key={key} onClick={open} >{value.name} </li>
+          ))}
+        </ul>
+}
 
     return (
-        <ul style={{ display: show ? "block" : "none" }}>
-          {Object.entries(reqName).map(([key, value]) => (
-            <li key={key} id="info" >{value.name} height is :{value.height} and  eye color is :{value.eye_color}</li>
+        <ul >
+          {Object.entries(name).map(([key, value]) => (
+            <li key={key} >{value.name} height is :{value.height} and  eye color is :{value.eye_color}</li>
           ))}
-          <button onClick={handleChange}>Hide Info</button>
+          <button onClick={close}>Hide Info</button>
         </ul>
       );
 }
