@@ -23,7 +23,7 @@ import ReactGA from 'react-ga';
 class App extends Component {
 
   initReactGA = () => {
-    ReactGA.initialize('UA-000000-01');
+    ReactGA.initialize('UA-213618899-1');
     ReactGA.pageview('test-init-pageview');
   };
 
