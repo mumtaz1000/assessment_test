@@ -1,4 +1,4 @@
-/*
+
 import './App.css';
 import PaginationComponent from './components/PaginationComponent';
 import useGaTracker from './components/useGaTracker';
@@ -14,8 +14,7 @@ function App() {
 }
 
 export default App;
-*/
-
+/*
 import { Component } from "react";
 import "./App.css";
 import ReactGA from 'react-ga';
@@ -40,3 +39,4 @@ class App extends Component {
   }
 }
 export default App;
+*/
